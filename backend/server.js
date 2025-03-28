@@ -112,7 +112,7 @@ app.post("/chat", async (req, res) => {
         const response = await axios.post(
             "https://api.together.xyz/v1/chat/completions",
             {
-                model: "meta-llama/Llama-Vision-Free", // ✅ Your specified LLM
+                model: "mistralai/Mistral-7B-Instruct-v0.1", 
                 messages: [{ role: "user", content: prompt }],
             },
             {
