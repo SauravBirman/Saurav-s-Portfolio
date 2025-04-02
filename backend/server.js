@@ -112,7 +112,7 @@ app.post("/chat", async (req, res) => {
         const response = await axios.post(
             "https://api.together.xyz/v1/chat/completions",
             {
-                model: "mistralai/Mistral-7B-Instruct-v0.1", 
+                model: "meta-llama/Llama-Vision-Free", // ✅ Your specified LLM
                 messages: [{ role: "user", content: prompt }],
             },
             {
@@ -127,5 +127,4 @@ app.post("/chat", async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(5000, () => console.log("Server running on port 5000"));
